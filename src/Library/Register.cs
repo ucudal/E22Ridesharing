@@ -28,7 +28,7 @@ public class Register{
             
                
         }
-         public void RegisterDriver(string userid, string password,string id, string name, string lastname)
+         public void RegisterDriver(string userid, string password,string id, string name, string lastname, Vehicle vehicle)
         {   
             try
             {
@@ -36,7 +36,7 @@ public class Register{
                 Console.WriteLine(Twitter.PublishToTwitter("New wonderful driver",@"conductorprofesiomal.PNG"));
                 var twitterDirectMessage = new TwitterMessage();
                 Console.WriteLine(twitterDirectMessage.SendMessage("¡Hola genio universal!", "1580569603910033409"));
-                Driver NewDriver = new Driver(id,lastname,name/*Vehicle vehicle*/);
+                Driver NewDriver = new Driver(id, lastname, name, vehicle);
                 listdrivers.Add(NewDriver);
             }
             catch (System.Exception error)
